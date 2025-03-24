@@ -8,14 +8,45 @@
     fetch('https://ipapi.co/json/')
       .then(response => response.json())
       .then(data => {
-        if (data.country_code === 'CA') {
+        const countryCode = data.country_code;
+        if (countryCode === 'CA') {
           window.location.href = 'https://www.amazon.ca/review/create-review?asin=B0F14XQRDM';
+        } else if (countryCode === 'JP') {
+          window.location.href = 'https://www.amazon.co.jp/review/create-review?asin=B0F14XQRDM';
+        } else if (countryCode === 'GB') {
+          window.location.href = 'https://www.amazon.co.uk/review/create-review?asin=B0F14XQRDM';
+        } else if (countryCode === 'DE') {
+          window.location.href = 'https://www.amazon.de/review/create-review?asin=B0F14XQRDM';
+        } else if (countryCode === 'FR') {
+          window.location.href = 'https://www.amazon.fr/review/create-review?asin=B0F14XQRDM';
+        } else if (countryCode === 'IT') {
+          window.location.href = 'https://www.amazon.it/review/create-review?asin=B0F14XQRDM';
+        } else if (countryCode === 'ES') {
+          window.location.href = 'https://www.amazon.es/review/create-review?asin=B0F14XQRDM';
+        } else if (countryCode === 'AU') {
+          window.location.href = 'https://www.amazon.com.au/review/create-review?asin=B0F14XQRDM';
+        } else if (countryCode === 'IN') {
+          window.location.href = 'https://www.amazon.in/review/create-review?asin=B0F14XQRDM';
+        } else if (countryCode === 'MX') {
+          window.location.href = 'https://www.amazon.com.mx/review/create-review?asin=B0F14XQRDM';
+        } else if (countryCode === 'BR') {
+          window.location.href = 'https://www.amazon.com.br/review/create-review?asin=B0F14XQRDM';
+        } else if (countryCode === 'NL') {
+          window.location.href = 'https://www.amazon.nl/review/create-review?asin=B0F14XQRDM';
+        } else if (countryCode === 'SG') {
+          window.location.href = 'https://www.amazon.sg/review/create-review?asin=B0F14XQRDM';
+        } else if (countryCode === 'AE') {
+          window.location.href = 'https://www.amazon.ae/review/create-review?asin=B0F14XQRDM';
+        } else if (countryCode === 'TR') {
+          window.location.href = 'https://www.amazon.com.tr/review/create-review?asin=B0F14XQRDM';
+        } else if (countryCode === 'SA') {
+          window.location.href = 'https://www.amazon.sa/review/create-review?asin=B0F14XQRDM';
         } else {
-          window.location.href = 'https://www.amazon.com/review/create-review?asin=B0F14XQRDM';
+          window.location.href = 'https://www.amazon.com/review/create-review?asin=B0F14XQRDM'; // Fallback
         }
       })
       .catch(() => {
-        window.location.href = 'https://www.amazon.com/review/create-review?asin=B0F14XQRDM';
+        window.location.href = 'https://www.amazon.com/review/create-review?asin=B0F14XQRDM'; // Fallback
       });
   </script>
 </body>
